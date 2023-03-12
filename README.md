@@ -4,5 +4,5 @@ A docker container with crond that pulls a github repository and do stuff on sch
 The cronjob is git pulling to the folder /node-cron
 
 TODO:
-Only do stuff when repo actually have changes. Could be a checksum compare or dig in to git status codes.
-Support for injecting GH token or ssh rsa key
+- Only do stuff when repo actually have changes. Could be a checksum compare or dig in to git status codes.
+- Support for injecting GH token or ssh rsa key
