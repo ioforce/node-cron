@@ -8,5 +8,5 @@ Changed to use a ssh script that compares local git comit with remote commit and
 Logs will be streamed to ```localhost:4000/cron```
 It takes around 20 seconds before the first cronjob runs.
 
-TODO:
-- Support for injecting GH token or ssh rsa key
+If this is a private repository run the container with:
+```docker run -e GITHUB_TOKEN=personalaccesstoken```
