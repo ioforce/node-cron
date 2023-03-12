@@ -1,5 +1,16 @@
+#if /node-cron not exists
+
+if [ ! -d "/node-cron" ]; then
+ echo "cloning repository first time"
+ git config --global url."https://${GITHUB_TOKEN}:@github.com/".insteadOf "https://github.com/"
+ sleep 2
+ git clone https://github.com/ioforce/node-cron.git /node-cron
+else
+ echo "repository already exists"
+fi
+
+
 cd /node-cron
-git config pull.rebase false
 REMOTE=$(git ls-remote https://github.com/ioforce/node-cron.git HEAD | awk '{print $1}')
 LOCAL=$(git rev-parse HEAD | awk '{print $1}')
 
