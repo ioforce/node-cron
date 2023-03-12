@@ -1,1 +1,2 @@
-* * * * * git -C /node-cron pull && cp /node-cron/index.html /etc/nginx/html/ && nginx -s reload >> /var/log/cron.log 2>&1
+* * * * * /gitwatcher.sh >> /etc/nginx/html/cron 2>&1
+#* * * * * git -C /node-cron pull && cp /node-cron/index.html /etc/nginx/html/ && nginx -s reload >> /var/log/cron.log 2>&1
